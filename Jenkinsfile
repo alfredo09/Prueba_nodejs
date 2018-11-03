@@ -2,24 +2,22 @@ pipeline
 {
   agent any
  
-  tools {
-	nodejs “nodejs-1”
-	}
+  tools { nodejs 'nodejs-1' }
  
   stages 
   {
-    stage(‘Example’) 
+    stage('Example') 
     {
       steps 
       {
-        sh ‘npm config ls’
+        sh 'npm config ls'
       }
     }
-      stage(‘version’) 
+      stage('version') 
       {
       steps 
        {
-        sh ‘node --version’
+        sh 'node --version'
        }
       }
    }
